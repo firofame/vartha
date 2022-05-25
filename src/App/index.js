@@ -3,9 +3,9 @@ import ReactPlayer from 'react-player/youtube'
 
 const channelList = [
     { name: 'Media One', videoId: 'yIe3anl_2Ks' },
-    { name: 'Asianet News', videoId: 'PNR06O9sSio' },
-    { name: '24 News', videoId: 'rWTZyuy6QV4' },
-    { name: 'Manorama News', videoId: 'JtLBF_Gjeiw' },
+    { name: 'Asianet', videoId: 'PNR06O9sSio' },
+    { name: 'Mathrubhumi', videoId: 'YGEgelAiUf0' },
+    { name: 'Manorama', videoId: 'JtLBF_Gjeiw' },
 ]
 
 export default function App() {
