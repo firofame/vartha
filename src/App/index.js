@@ -21,6 +21,7 @@ export default function App() {
                 width="100%"
                 height="90%"
                 playing
+                controls
                 url={'https://www.youtube.com/watch?v=' + videoId}
             />
             <div style={{ textAlign: 'center', paddingTop: 20 }} >
