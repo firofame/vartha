@@ -20,7 +20,7 @@ export default function App() {
         <div>
             <ReactPlayer
                 width="100%"
-                height="90%"
+                height={window.innerWidth > 768 ? "90%" : '60%'}
                 playing
                 controls
                 url={'https://www.youtube.com/watch?v=' + videoId}
