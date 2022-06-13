@@ -25,10 +25,16 @@ export default function App() {
                 controls
                 url={'https://www.youtube.com/watch?v=' + videoId}
             />
-            <div style={{ textAlign: 'center', paddingTop: 20 }} >
+            <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
                 {channelList.map((channel, index) => {
                     return (
-                        <button style={{ padding: 8, marginRight: 8 }} onClick={() => handleClick(channel)}>
+                        <button
+                            style={{
+                                padding: 8,
+                                marginRight: 16,
+                                marginBottom: 16
+                            }}
+                            onClick={() => handleClick(channel)}>
                             {channel.name}
                         </button>
                     )
