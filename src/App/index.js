@@ -6,6 +6,7 @@ const channelList = [
     { name: 'Asianet', videoId: 'PNR06O9sSio' },
     { name: 'Mathrubhumi', videoId: 'YGEgelAiUf0' },
     { name: 'Manorama', videoId: 'JtLBF_Gjeiw' },
+    { name: 'NDTV', videoId: 'WB-y7_ymPJ4' },
 ]
 
 export default function App() {
