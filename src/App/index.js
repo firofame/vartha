@@ -1,32 +1,29 @@
 import React, { useState } from 'react'
-import ReactPlayer from 'react-player/youtube'
 
 const channelList = [
-    { name: 'Media One', videoId: 'yIe3anl_2Ks' },
-    { name: 'Asianet', videoId: 'PNR06O9sSio' },
-    { name: 'Mathrubhumi', videoId: 'YGEgelAiUf0' },
-    { name: 'Manorama', videoId: 'JtLBF_Gjeiw' },
-    { name: 'NDTV', videoId: 'WB-y7_ymPJ4' },
+    { name: 'Media One', channelId: 'UC-f7r46JhYv78q5pGrO6ivA' },
+    { name: 'Asianet', channelId: 'UCf8w5m0YsRa8MHQ5bwSGmbw' },
+    { name: 'Mathrubhumi', channelId: 'UCwXrBBZnIh2ER4lal6WbAHw' },
+    { name: 'Manorama', channelId: 'UCP0uG-mcMImgKnJz-VjJZmQ' },
+    { name: 'NDTV', channelId: 'UCZFMm1mMw0F81Z37aaEzTUA' },
 ]
 
 export default function App() {
-    const [videoId, setVideoId] = useState(channelList[0].videoId)
+    const [channelId, setChannelId] = useState(channelList[0].channelId)
 
     const handleClick = (channel) => {
-        setVideoId(channel.videoId)
+        setChannelId(channel.channelId)
     }
 
     return (
         <div>
-            <ReactPlayer
-                pip
-                stopOnUnmount={false}
+            <iframe
+                title='youtube'
                 width="100%"
                 height={window.innerWidth > window.innerHeight ? "90%" : '60%'}
-                playing
-                controls
-                url={'https://www.youtube.com/watch?v=' + videoId}
-            />
+                src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
+                frameborder="0"
+                allowfullscreen />
             <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
                 {channelList.map((channel, index) => {
                     return (
