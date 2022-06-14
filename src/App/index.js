@@ -19,6 +19,8 @@ export default function App() {
     return (
         <div>
             <ReactPlayer
+                pip
+                stopOnUnmount={false}
                 width="100%"
                 height={window.innerWidth > 768 ? "90%" : '60%'}
                 playing
