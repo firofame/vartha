@@ -22,7 +22,7 @@ export default function App() {
                 pip
                 stopOnUnmount={false}
                 width="100%"
-                height={window.innerWidth > window.height ? "90%" : '60%'}
+                height={window.innerWidth > window.innerHeight ? "90%" : '60%'}
                 playing
                 controls
                 url={'https://www.youtube.com/watch?v=' + videoId}
