@@ -6,6 +6,7 @@ const channelList = [
     { name: 'Mathrubhumi', channelId: 'UCwXrBBZnIh2ER4lal6WbAHw' },
     { name: 'Manorama', channelId: 'UCP0uG-mcMImgKnJz-VjJZmQ' },
     { name: 'NDTV', channelId: 'UCZFMm1mMw0F81Z37aaEzTUA' },
+    { name: 'Al Jazeera', channelId: 'UCNye-wNBqNL5ZzHSJj3l8Bg' },
 ]
 
 export default function App() {
