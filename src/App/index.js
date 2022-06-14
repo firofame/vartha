@@ -24,7 +24,7 @@ export default function App() {
                 height={window.innerWidth > window.innerHeight ? "90%" : '60%'}
                 src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
                 frameborder="0"
-                allow="fullscreen;" />
+                allow="fullscreen; autoplay; picture-in-picture;" />
             <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
                 {channelList.map((channel, index) => {
                     return (
