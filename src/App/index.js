@@ -7,7 +7,7 @@ const channelList = [
     { name: 'Manorama', channelId: 'UCP0uG-mcMImgKnJz-VjJZmQ' },
     { name: 'NDTV', channelId: 'UCZFMm1mMw0F81Z37aaEzTUA' },
     { name: 'Al Jazeera', channelId: 'UCNye-wNBqNL5ZzHSJj3l8Bg' },
-    { name: 'Makkah Live', channelId: 'UCos52azQNBgW63_9uDJoPDA' },
+    { name: 'Makkah', channelId: 'UCos52azQNBgW63_9uDJoPDA' },
 ]
 
 export default function App() {
