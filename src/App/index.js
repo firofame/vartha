@@ -13,16 +13,12 @@ const channelList = [
 export default function App() {
     const [channelId, setChannelId] = useState(channelList[0].channelId)
 
-    const handleClick = (channel) => {
-        setChannelId(channel.channelId)
-    }
-
     return (
-        <div>
+        <>
             <iframe
                 title='youtube'
                 width="100%"
-                height={window.innerWidth > window.innerHeight ? "90%" : '60%'}
+                height={window.innerWidth > window.innerHeight ? '90%' : window.innerWidth * 9 / 16}
                 src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
                 frameborder="0"
                 allow="fullscreen; autoplay; picture-in-picture;" />
@@ -35,12 +31,12 @@ export default function App() {
                                 marginRight: 16,
                                 marginBottom: 16
                             }}
-                            onClick={() => handleClick(channel)}>
+                            onClick={() => setChannelId(channel.channelId)}>
                             {channel.name}
                         </button>
                     )
                 })}
             </div>
-        </div>
+        </>
     )
 }
