@@ -1,44 +1,44 @@
 import React, { useState } from 'react'
 
 const channelList = [
-    { name: 'Media One', channelId: 'UC-f7r46JhYv78q5pGrO6ivA' },
-    { name: 'Asianet', channelId: 'UCf8w5m0YsRa8MHQ5bwSGmbw' },
-    { name: 'Mathrubhumi', channelId: 'UCwXrBBZnIh2ER4lal6WbAHw' },
-    { name: 'Manorama', channelId: 'UCP0uG-mcMImgKnJz-VjJZmQ' },
-    { name: 'NDTV', channelId: 'UCZFMm1mMw0F81Z37aaEzTUA' },
-    { name: 'Al Jazeera', channelId: 'UCNye-wNBqNL5ZzHSJj3l8Bg' },
-    { name: 'Makkah', channelId: 'UCos52azQNBgW63_9uDJoPDA' },
+  { name: 'Media One', channelId: 'UC-f7r46JhYv78q5pGrO6ivA' },
+  { name: 'Asianet', channelId: 'UCf8w5m0YsRa8MHQ5bwSGmbw' },
+  { name: 'Mathrubhumi', channelId: 'UCwXrBBZnIh2ER4lal6WbAHw' },
+  { name: 'Manorama', channelId: 'UCP0uG-mcMImgKnJz-VjJZmQ' },
+  { name: 'NDTV', channelId: 'UCZFMm1mMw0F81Z37aaEzTUA' },
+  { name: 'Al Jazeera', channelId: 'UCNye-wNBqNL5ZzHSJj3l8Bg' },
+  { name: 'Makkah', channelId: 'UCos52azQNBgW63_9uDJoPDA' },
 ]
 
 export default function App() {
-    const [channelId, setChannelId] = useState(channelList[0].channelId)
-    const isLandscape = window.innerWidth > window.innerHeight
+  const [channelId, setChannelId] = useState(channelList[0].channelId)
+  const isLandscape = window.innerWidth > window.innerHeight
 
-    return (
-        <div>
-            <iframe
-                title='youtube'
-                width="100%"
-                height={isLandscape ? '100%' : window.innerWidth * 9 / 16}
-                src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
-                frameBorder="0"
-                allow="fullscreen; autoplay; picture-in-picture;" />
-            <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
-                {channelList.map((channel, index) => {
-                    return (
-                        <button
-                            key={channel.channelId}
-                            style={{
-                                padding: 8,
-                                marginRight: 16,
-                                marginBottom: 16
-                            }}
-                            onClick={() => setChannelId(channel.channelId)}>
-                            {channel.name}
-                        </button>
-                    )
-                })}
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <iframe
+        title='youtube'
+        width="100%"
+        height={isLandscape ? '100%' : window.innerWidth * 9 / 16}
+        src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
+        frameBorder="0"
+        allow="fullscreen; autoplay; picture-in-picture;" />
+      <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
+        {channelList.map((channel, index) => {
+          return (
+            <button
+              key={channel.channelId}
+              style={{
+                padding: 8,
+                marginRight: 16,
+                marginBottom: 16
+              }}
+              onClick={() => setChannelId(channel.channelId)}>
+              {channel.name}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
 }
