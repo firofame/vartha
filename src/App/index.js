@@ -12,20 +12,22 @@ const channelList = [
 
 export default function App() {
     const [channelId, setChannelId] = useState(channelList[0].channelId)
+    const isLandscape = window.innerWidth > window.innerHeight
 
     return (
-        <>
+        <div>
             <iframe
                 title='youtube'
                 width="100%"
-                height={window.innerWidth > window.innerHeight ? '90%' : window.innerWidth * 9 / 16}
+                height={isLandscape ? '100%' : window.innerWidth * 9 / 16}
                 src={"https://www.youtube.com/embed/live_stream?channel=" + channelId + "&autoplay=1"}
-                frameborder="0"
+                frameBorder="0"
                 allow="fullscreen; autoplay; picture-in-picture;" />
             <div style={{ textAlign: 'center', paddingTop: 20, marginLeft: 16 }} >
                 {channelList.map((channel, index) => {
                     return (
                         <button
+                            key={channel.channelId}
                             style={{
                                 padding: 8,
                                 marginRight: 16,
@@ -37,6 +39,6 @@ export default function App() {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
