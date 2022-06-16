@@ -1,3 +1,3 @@
 # Malayalam News Live TV
 
-https://www.vartha.live/
+https://firofame.github.io/vartha/
